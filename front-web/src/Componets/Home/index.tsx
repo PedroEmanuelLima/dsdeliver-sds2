@@ -1,32 +1,38 @@
 import './styles.css';
+import Footer from '../footer';
+
 import { ReactComponent as MainImage } from './main.svg';
 
 export default function Home() {
-    
-    return(
-        <div className="home-container">
-            <div className="home-content">
-                <div className="home-actions">
-                    <h1 className="home-title">
-                        Faça seu pedido <br />
-                        que entregamos <br />
-                        para você!!!
-                    </h1>
 
-                    <h3 className="home-subtitle">
-                        Escolha seu pedido e em poucos minutos <br />
-                        levaremos na sua porta 
-                    </h3>
+    return (
+        <>
+            <div className="home-container">
+                <div className="home-content">
+                    <div className="home-actions">
+                        <h1 className="home-title">
+                            Faça seu pedido <br />
+                            que entregamos <br />
+                            para você!!!
+                        </h1>
 
-                    <a href="/" className="home-btn-order">
-                        FAZER PEDIDO
-                    </a>
-                </div>
+                        <h3 className="home-subtitle">
+                            Escolha seu pedido e em poucos minutos <br />
+                            levaremos na sua porta
+                        </h3>
 
-                <div className="home-image">
-                    <MainImage />
+                        <a href="/" className="home-btn-order">
+                            FAZER PEDIDO
+                        </a>
+                    </div>
+
+                    <div className="home-image">
+                        <MainImage />
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <Footer />
+        </>
     );
 }
