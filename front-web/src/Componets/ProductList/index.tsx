@@ -13,13 +13,7 @@ export default function ProductList({ products, onSelectProduct, selectedProduct
     return(
         <div className="orders-list-container">
             <div className="orders-list-items">
-                { products.map(product => <ProductCard
-                        product={product}
-                        key={product.id}
-                        onSelectProduct={onSelectProduct}
-                        isSelected={checkIsSelected(selectedProducts, product)}
-                    />
-                ) }
+                { products.map(product => <ProductCard product={product} key={product.id} onSelectProduct={onSelectProduct} isSelected={checkIsSelected(selectedProducts, product)}/>)}
             </div>
         </div>
     );
