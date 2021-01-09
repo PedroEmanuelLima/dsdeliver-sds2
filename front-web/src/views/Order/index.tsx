@@ -23,7 +23,7 @@ export default function Order() {
     useEffect(() => {
         fetchProducts()
             .then(response => setProducts(response.data))
-            .catch(err => console.log(err));
+            .catch(err => toast.warning('Erro ao listar produtos'));
     }, []);
 
     const handleSelectProduct = (product: Product) => {
